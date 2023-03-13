@@ -807,8 +807,6 @@ echo "正在执行：给feeds.conf.default增加插件源"
 sed -i '/dahuilang/d' "${HOME_PATH}/feeds.conf.default"
 sed -i '/helloworld/d' "${HOME_PATH}/feeds.conf.default"
 sed -i '/passwall/d' "${HOME_PATH}/feeds.conf.default"
-sed -i '/autotimeset/d' "${HOME_PATH}/feeds.conf.default"
-
 
 cat >>"${HOME_PATH}/feeds.conf.default" <<-EOF
 src-git dahuilang https://github.com/shidahuilang/openwrt-package.git;${PACKAGE_BRANCH}
@@ -820,7 +818,6 @@ src-git helloworld https://github.com/fw876/helloworld
 src-git passwall https://github.com/xiaorouji/openwrt-passwall;packages
 src-git passwall1 https://github.com/xiaorouji/openwrt-passwall;luci
 src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2;main
-src-git autotimeset https://github.com/sirpdboy/luci-app-autotimeset
 EOF
 fi
 sed -i '/^#/d' "${HOME_PATH}/feeds.conf.default"
